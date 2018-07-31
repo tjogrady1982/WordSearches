@@ -10,6 +10,9 @@ namespace WordSearches
     {
         static void Main(string[] args)
         {
+            var wordList = new FileDownloader();
+            wordList.Download();
+            Console.ReadLine();
         }
     }
 }
