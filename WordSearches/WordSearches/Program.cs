@@ -10,8 +10,14 @@ namespace WordSearches
     {
         static void Main(string[] args)
         {
-            var wordList = new FileDownloader();
-            wordList.Download();
+            var WebDownload = new FileDownloader();
+            WebDownload.Download();
+            
+           foreach(var item in WordList.wordList)
+            {
+                Console.WriteLine();
+            }
+            
             Console.ReadLine();
         }
     }
