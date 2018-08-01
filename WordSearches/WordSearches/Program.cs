@@ -13,10 +13,13 @@ namespace WordSearches
             var WebDownload = new FileDownloader();
             WebDownload.Download();
             
-           foreach(var item in WordList.wordList)
-            {
-                Console.WriteLine();
-            }
+           //foreach(var item in WordList.wordList)
+           // {
+           //     Console.WriteLine();
+           // }
+
+            var binary = new BinarySearch();
+            binary.FindWord("zebra");
             
             Console.ReadLine();
         }

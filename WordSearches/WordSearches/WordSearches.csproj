@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinarySearch.cs" />
     <Compile Include="FileDownloader.cs" />
     <Compile Include="LinearSearch.cs" />
     <Compile Include="Program.cs" />
