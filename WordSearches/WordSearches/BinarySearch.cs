@@ -11,26 +11,27 @@ namespace WordSearches
 
         public string FindWord(string word)
         {
-            var High = WordList.wordList.Count - 1;
+            var High = WordList.wordList.Count;// - 1;
             var Low = 0;
             var Mid = 0;
             bool Found = false;
 
             while (!Found)
             {
-                Mid = Low + ((High - Low) / 2);
+                Mid = ((High + Low) / 2);
 
                 if (word == WordList.wordList[Mid])// handles word being middle word
                 {
                     Found = true;
                 }
-                else if (word.CompareTo(WordList.wordList[Mid]) < 0)
+                //else if (word.CompareTo(WordList.wordList[Mid]) > 0)
+                else if (string.Compare(word, WordList.wordList[Mid]) == 1)
                 {
-                    High = Mid;
+                    Low = Mid;
                 }
                 else
                 {
-                   Low = Mid;
+                    High = Mid;
                 }
             }
 
